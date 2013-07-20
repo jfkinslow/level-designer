@@ -7,6 +7,8 @@ import gtk;
 
 #Create the main class
 class Base:
+	def btn1_OnClicked(self, widget, data=None):
+		pass
 	def destroy(self, widget, data=None):
 		#Quit the script
 		gtk.main_quit();
@@ -20,7 +22,7 @@ class Base:
 		self.window.set_size_request(1024, 704);
 		#Create a button
 		self.button1 = gtk.Button("EXIT");
-		self.button1.connect("clicked", self.destroy);
+		self.button1.connect("clicked", self.btn1_OnClicked);
 		fixed = gtk.Fixed();
 		fixed.put(self.button1, 20, 30);
 		self.window.add(fixed);
